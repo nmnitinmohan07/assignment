@@ -44,8 +44,8 @@ public class SuggestionServices {
 				FormDTO form = new FormDTO();
 				form.setCity(nextRecord[1]);				// setting city data in formDto object
 				form.setState(nextRecord[2]);				// setting state data in formDto object
-				cityList.add(form);
-			}
+				cityList.add(form);							// This will be helpful in case we want to populate state as per the city selected. 
+			}												// time complexity is nlog(n)
 			csvReader.close();
 		} else
 			cityList = formDtoList.getFormList();			// From 1st time onwards , it need not read .csv file again. It uses existing object to get data.

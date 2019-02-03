@@ -14,7 +14,7 @@ public class FormDtoList {
 	private FormDtoList() {
 	}
 
-	public static FormDtoList getInstance() {
+	public static FormDtoList getInstance() {			// Using Double Checked Locking technique ,reduces overhead after 1st initialization.
 		if (obj == null)
 			synchronized (FormDtoList.class) {
 				if(obj == null)
